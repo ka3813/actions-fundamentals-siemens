@@ -2,6 +2,13 @@ name: My first workflow
 
 on: [workflow_dispatch]
 
+workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        type: environment
+        required: true
+        
 jobs:
   hello-world-job:
     runs-on: ubuntu-latest
