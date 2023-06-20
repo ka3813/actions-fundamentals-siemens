@@ -10,20 +10,6 @@ workflow_dispatch:
         required: true
         
 jobs:
-  hello-world-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: echoing hello world
-        run: echo "Hello world!"
-        shell: bash
-     Test:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch'
-    needs: Build
-    environment: Test
-    steps:
-      - run: echo "🧪 Testing..."
-
   Load-Test:
     runs-on: ubuntu-latest
     if: github.event_name == 'workflow_dispatch'
