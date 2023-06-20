@@ -1,8 +1,6 @@
 name: My first workflow
 
 on: [workflow_dispatch]
-
-workflow_dispatch:
     inputs:
       environment:
         description: 'Environment to deploy to'
